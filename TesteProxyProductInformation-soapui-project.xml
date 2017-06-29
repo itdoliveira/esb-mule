@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3c515ae0-c5a1-43f8-9aae-dbcfc4a5768b" activeEnvironment="Default" name="TesteProxyProductInformation" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d562b64f-2016-40ca-b068-8b75bcdb4981" wsaVersion="NONE" name="ProductInformationSOAP" type="wsdl" bindingName="{http://www.fiap.com.br/ProductInformation}ProductInformationSOAP" soapVersion="1_1" anonymous="optional" definition="http://127.0.0.1:8085/productInfo/proxy?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://127.0.0.1:8085/productInfo/proxy?wsdl"><con:part><con:url>http://127.0.0.1:8085/productInfo/proxy?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ProductInformation" targetNamespace="http://www.fiap.com.br/ProductInformation" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.fiap.com.br/ProductInformation" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:prd="http://www.fiap.com.br/product">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.fiap.com.br/ProductInformation">
+      <xsd:import namespace="http://www.fiap.com.br/product" schemaLocation="http://127.0.0.1:8085/productInfo/proxy?xsd=../xsd/product.xsd"/>
+      <xsd:element name="GetProduct">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ProductIn" type="prd:ProductInTyp"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetProductResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ProductOut" type="prd:ProductOutTyp"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProductResponse">
+    <wsdl:part element="tns:GetProductResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetProductRequest">
+    <wsdl:part element="tns:GetProduct" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProductInformation">
+    <wsdl:operation name="GetProduct">
+      <wsdl:input message="tns:GetProductRequest"></wsdl:input>
+      <wsdl:output message="tns:GetProductResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductInformationSOAP" type="tns:ProductInformation">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://www.fiap.com.br/ProductInformation/GetProduct"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductInformation">
+    <wsdl:port binding="tns:ProductInformationSOAP" name="ProductInformationSOAP">
+      <soap:address location="http://127.0.0.1:8085/productInfo/proxy"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://127.0.0.1:8085/productInfo/proxy?xsd=../xsd/product.xsd</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.fiap.com.br/product" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.fiap.com.br/product">
+  <xs:element name="ProductIn" type="tns:ProductInTyp"/>
+  <xs:element name="ProductOut" type="tns:ProductOutTyp"/>
+  <xs:complexType name="ProductInTyp">
+    <xs:sequence>
+      <xs:element name="Id_product" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductOutTyp">
+    <xs:sequence>
+      <xs:element name="Id_product" type="xs:long"/>
+      <xs:element name="prodDesc" type="xs:string"/>
+      <xs:element name="Id_provider" type="xs:long"/>
+      <xs:element name="provDesc" type="xs:string"/>
+      <xs:element name="category" type="xs:string"/>
+      <xs:element name="size" type="xs:string"/>
+      <xs:element name="price" type="xs:string"/>
+      <xs:element name="Qty" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://127.0.0.1:8085/productInfo/proxy</con:endpoint></con:endpoints><con:operation id="7bf84e6d-c710-4e44-9133-9142ee2bfd8e" isOneWay="false" action="http://www.fiap.com.br/ProductInformation/GetProduct" name="GetProduct" bindingOperationName="GetProduct" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6bbefe19-d6b4-4d71-ba35-5920fa4f1628" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8085/productInfo/proxy</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:prod="http://www.fiap.com.br/ProductInformation" xmlns:prod1="http://www.fiap.com.br/product">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <prod:GetProduct>\r
+         <ProductIn>\r
+            <prod1:Id_product>1</prod1:Id_product>\r
+         </ProductIn>\r
+      </prod:GetProduct>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.fiap.com.br/ProductInformation/GetProduct"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

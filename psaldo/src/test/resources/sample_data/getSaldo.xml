@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:getSaldo xmlns:ns0="http://psaldobanco/">
+  <arg0>
+    <agencia>1</agencia>
+    <conta>1</conta>
+    <name>????</name>
+  </arg0>
+</ns0:getSaldo>

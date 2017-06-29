@@ -1,0 +1,173 @@
+INFO  2017-06-28 20:25:06,141 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'pproxytoproductinformation'            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:25:06,259 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2017-06-28 20:25:06,363 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Starting discovery of extensions
+INFO  2017-06-28 20:25:06,457 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Discovered 1 extensions
+INFO  2017-06-28 20:25:06,458 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Registering extension validation (version 3.8)
+INFO  2017-06-28 20:25:06,506 [main] org.mule.config.spring.MuleArtifactContext: Refreshing org.mule.config.spring.MuleArtifactContext@c8ac2e: startup date [Wed Jun 28 20:25:06 BRT 2017]; root of context hierarchy
+INFO  2017-06-28 20:25:07,424 [main] org.mule.config.spring.processors.NoDevkitInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+WARN  2017-06-28 20:25:07,993 [main] org.mule.module.ognl.expression.OgnlExpressionEvaluator: OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+INFO  2017-06-28 20:25:08,307 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx2.log
+INFO  2017-06-28 20:25:08,316 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx2.log
+INFO  2017-06-28 20:25:08,375 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising model: _muleSystemModel
+INFO  2017-06-28 20:25:08,381 [main] org.mule.construct.FlowConstructLifecycleManager: Initialising flow: PProxyToProductInformationFlow
+INFO  2017-06-28 20:25:08,381 [main] org.mule.exception.DefaultMessagingExceptionStrategy: Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@41d1d3
+INFO  2017-06-28 20:25:08,404 [main] org.mule.processor.SedaStageLifecycleManager: Initialising service: PProxyToProductInformationFlow.stage1
+INFO  2017-06-28 20:25:08,674 [main] org.mule.lifecycle.AbstractLifecycleManager: Disposing RegistryBroker
+INFO  2017-06-28 20:25:08,677 [main] org.mule.lifecycle.AbstractLifecycleManager: Disposing model: _muleSystemModel
+INFO  2017-06-28 20:25:08,798 [main] org.mule.config.spring.MuleArtifactContext: Closing org.mule.config.spring.MuleArtifactContext@c8ac2e: startup date [Wed Jun 28 20:25:06 BRT 2017]; root of context hierarchy
+ERROR 2017-06-28 20:25:08,881 [main] org.mule.module.launcher.application.DefaultMuleApplication: null
+java.net.MalformedURLException: no protocol: wsdl/ProductInformation.wsdl”
+	at java.net.URL.<init>(URL.java:585) ~[?:1.7.0_79]
+	at java.net.URL.<init>(URL.java:482) ~[?:1.7.0_79]
+	at java.net.URL.<init>(URL.java:431) ~[?:1.7.0_79]
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source) ~[?:?]
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source) ~[?:?]
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source) ~[?:?]
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source) ~[?:?]
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source) ~[?:?]
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) ~[?:?]
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) ~[?:?]
+	at com.ibm.wsdl.xml.WSDLReaderImpl.getDocument(WSDLReaderImpl.java:2188) ~[wsdl4j-1.6.3.jar:1.6.3]
+	at com.ibm.wsdl.xml.WSDLReaderImpl.readWSDL(WSDLReaderImpl.java:2390) ~[wsdl4j-1.6.3.jar:1.6.3]
+	at com.ibm.wsdl.xml.WSDLReaderImpl.readWSDL(WSDLReaderImpl.java:2422) ~[wsdl4j-1.6.3.jar:1.6.3]
+	at org.apache.cxf.wsdl11.WSDLManagerImpl.loadDefinition(WSDLManagerImpl.java:263) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.apache.cxf.wsdl11.WSDLManagerImpl.getDefinition(WSDLManagerImpl.java:206) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.mule.module.cxf.support.ProxyServiceConfiguration.getEndpointName(ProxyServiceConfiguration.java:54) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.apache.cxf.service.factory.ReflectionServiceFactoryBean.getEndpointName(ReflectionServiceFactoryBean.java:1893) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.apache.cxf.service.factory.ReflectionServiceFactoryBean.getEndpointName(ReflectionServiceFactoryBean.java:1885) ~[cxf-rt-core-2.7.15.jar:2.7.15]
+	at org.mule.module.cxf.builder.AbstractInboundMessageProcessorBuilder.build(AbstractInboundMessageProcessorBuilder.java:184) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.builder.AbstractInboundMessageProcessorBuilder.build(AbstractInboundMessageProcessorBuilder.java:60) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.module.cxf.config.FlowConfiguringMessageProcessor.initialise(FlowConfiguringMessageProcessor.java:93) ~[mule-module-cxf-3.8.1.jar:3.8.1]
+	at org.mule.processor.chain.AbstractMessageProcessorChain.initialise(AbstractMessageProcessorChain.java:87) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractFlowConstruct.initialiseIfInitialisable(AbstractFlowConstruct.java:317) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractPipeline.doInitialise(AbstractPipeline.java:243) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.Flow.doInitialise(Flow.java:75) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractFlowConstruct$1.onTransition(AbstractFlowConstruct.java:104) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractFlowConstruct$1.onTransition(AbstractFlowConstruct.java:98) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:138) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.FlowConstructLifecycleManager.fireInitialisePhase(FlowConstructLifecycleManager.java:78) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.construct.AbstractFlowConstruct.initialise(AbstractFlowConstruct.java:97) ~[mule-core-3.8.1.jar:3.8.1]
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:237) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.phases.MuleContextInitialisePhase.applyLifecycle(MuleContextInitialisePhase.java:71) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:99) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:71) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.RegistryLifecycleManager.invokePhase(RegistryLifecycleManager.java:155) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:126) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.registry.AbstractRegistry.fireLifecycle(AbstractRegistry.java:146) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:116) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177) ~[mule-module-spring-config-3.8.1.jar:3.8.1]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100) ~[mule-module-spring-config-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AutoConfigurationBuilder.autoConfigure(AutoConfigurationBuilder.java:101) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AutoConfigurationBuilder.doConfigure(AutoConfigurationBuilder.java:52) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:198) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:63) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:136) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:58) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:25) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArchiveDeployer.guardedDeploy(DefaultArchiveDeployer.java:324) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:345) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:163) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:268) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:83) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:275) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:150) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:104) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:170) ~[mule-module-launcher-3.8.1.jar:3.8.1]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.8.1.jar:?]
+INFO  2017-06-28 20:25:08,884 [main] org.mule.module.launcher.application.DefaultMuleApplication: App 'pproxytoproductinformation' never started, nothing to dispose of
+INFO  2017-06-28 20:25:49,195 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'pproxytoproductinformation'            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+WARN  2017-06-28 20:25:49,198 [Mule.app.deployer.monitor.1.thread.1] com.mulesoft.module.client.APIPlatformClientCoreExtension: Client ID or Client Secret were not provided. API Manager client is DISABLED for app pproxytoproductinformation
+INFO  2017-06-28 20:25:49,200 [Mule.app.deployer.monitor.1.thread.1] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2017-06-28 20:25:49,203 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.extension.internal.manager.DefaultExtensionManager: Starting discovery of extensions
+INFO  2017-06-28 20:25:49,229 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.extension.internal.manager.DefaultExtensionManager: Discovered 1 extensions
+INFO  2017-06-28 20:25:49,229 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.extension.internal.manager.DefaultExtensionManager: Registering extension validation (version 3.8)
+INFO  2017-06-28 20:25:49,231 [Mule.app.deployer.monitor.1.thread.1] org.mule.config.spring.MuleArtifactContext: Refreshing org.mule.config.spring.MuleArtifactContext@106054a: startup date [Wed Jun 28 20:25:49 BRT 2017]; root of context hierarchy
+INFO  2017-06-28 20:25:49,431 [Mule.app.deployer.monitor.1.thread.1] org.mule.config.spring.processors.NoDevkitInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  2017-06-28 20:25:49,517 [Mule.app.deployer.monitor.1.thread.1] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx2.log
+INFO  2017-06-28 20:25:49,518 [Mule.app.deployer.monitor.1.thread.1] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx2.log
+INFO  2017-06-28 20:25:49,525 [Mule.app.deployer.monitor.1.thread.1] org.mule.lifecycle.AbstractLifecycleManager: Initialising model: _muleSystemModel
+INFO  2017-06-28 20:25:49,527 [Mule.app.deployer.monitor.1.thread.1] org.mule.construct.FlowConstructLifecycleManager: Initialising flow: PProxyToProductInformationFlow
+INFO  2017-06-28 20:25:49,527 [Mule.app.deployer.monitor.1.thread.1] org.mule.exception.DefaultMessagingExceptionStrategy: Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@144f245
+INFO  2017-06-28 20:25:49,536 [Mule.app.deployer.monitor.1.thread.1] org.mule.processor.SedaStageLifecycleManager: Initialising service: PProxyToProductInformationFlow.stage1
+INFO  2017-06-28 20:25:50,404 [Mule.app.deployer.monitor.1.thread.1] org.mule.config.spring.SpringXmlConfigurationBuilder: Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\FIAP\Desktop\mule-lab3\.mule\apps\pproxytoproductinformation\PProxyToProductInformation.xml'}]"
+INFO  2017-06-28 20:25:50,405 [Mule.app.deployer.monitor.1.thread.1] org.mule.config.builders.AutoConfigurationBuilder: Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\FIAP\Desktop\mule-lab3\.mule\apps\pproxytoproductinformation\PProxyToProductInformation.xml'}]"
+INFO  2017-06-28 20:25:53,411 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'pproxytoproductinformation'                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:25:53,412 [Mule.app.deployer.monitor.1.thread.1] org.mule.util.queue.QueueXaResourceManager: Starting ResourceManager
+INFO  2017-06-28 20:25:53,412 [Mule.app.deployer.monitor.1.thread.1] org.mule.util.queue.QueueXaResourceManager: Started ResourceManager
+INFO  2017-06-28 20:25:53,448 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.http.internal.listener.DefaultHttpListenerConfig: Listening for requests on http://localhost:8085/productInfo/proxy
+INFO  2017-06-28 20:25:53,449 [Mule.app.deployer.monitor.1.thread.1] org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:25:53,450 [Mule.app.deployer.monitor.1.thread.1] org.mule.lifecycle.AbstractLifecycleManager: Starting model: _muleSystemModel
+INFO  2017-06-28 20:25:53,452 [Mule.app.deployer.monitor.1.thread.1] org.mule.construct.FlowConstructLifecycleManager: Starting flow: PProxyToProductInformationFlow
+INFO  2017-06-28 20:25:53,452 [Mule.app.deployer.monitor.1.thread.1] org.mule.processor.SedaStageLifecycleManager: Starting service: PProxyToProductInformationFlow.stage1
+INFO  2017-06-28 20:25:53,471 [Mule.app.deployer.monitor.1.thread.1] org.mule.module.management.agent.WrapperManagerAgent: This JVM hasn't been launched by the wrapper, the agent will not run.
+INFO  2017-06-28 20:25:55,636 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'pproxytoproductinformation'            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:25:55,758 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2017-06-28 20:25:55,843 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Starting discovery of extensions
+INFO  2017-06-28 20:25:55,932 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Discovered 1 extensions
+INFO  2017-06-28 20:25:55,932 [main] org.mule.module.extension.internal.manager.DefaultExtensionManager: Registering extension validation (version 3.8)
+INFO  2017-06-28 20:25:55,974 [main] org.mule.config.spring.MuleArtifactContext: Refreshing org.mule.config.spring.MuleArtifactContext@196c5d9: startup date [Wed Jun 28 20:25:55 BRT 2017]; root of context hierarchy
+INFO  2017-06-28 20:25:56,785 [main] org.mule.config.spring.processors.NoDevkitInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+WARN  2017-06-28 20:25:57,327 [main] org.mule.module.ognl.expression.OgnlExpressionEvaluator: OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+INFO  2017-06-28 20:25:57,579 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-tx-log\tx2.log
+INFO  2017-06-28 20:25:57,587 [main] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx1.log and C:\Users\FIAP\Desktop\mule-lab3\.mule\.\.mule\pproxytoproductinformation\queue-xa-tx-log\tx2.log
+INFO  2017-06-28 20:25:57,648 [main] org.mule.lifecycle.AbstractLifecycleManager: Initialising model: _muleSystemModel
+INFO  2017-06-28 20:25:57,651 [main] org.mule.construct.FlowConstructLifecycleManager: Initialising flow: PProxyToProductInformationFlow
+INFO  2017-06-28 20:25:57,651 [main] org.mule.exception.DefaultMessagingExceptionStrategy: Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@16eea15
+INFO  2017-06-28 20:25:57,670 [main] org.mule.processor.SedaStageLifecycleManager: Initialising service: PProxyToProductInformationFlow.stage1
+INFO  2017-06-28 20:25:58,715 [main] org.mule.config.spring.SpringXmlConfigurationBuilder: Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\FIAP\Desktop\mule-lab3\.mule\apps\pproxytoproductinformation\PProxyToProductInformation.xml'}]"
+INFO  2017-06-28 20:25:58,715 [main] org.mule.config.builders.AutoConfigurationBuilder: Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\FIAP\Desktop\mule-lab3\.mule\apps\pproxytoproductinformation\PProxyToProductInformation.xml'}]"
+INFO  2017-06-28 20:26:01,739 [main] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'pproxytoproductinformation'                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:26:01,743 [main] org.mule.util.queue.QueueXaResourceManager: Starting ResourceManager
+INFO  2017-06-28 20:26:01,743 [main] org.mule.util.queue.QueueXaResourceManager: Started ResourceManager
+INFO  2017-06-28 20:26:01,794 [main] org.mule.module.http.internal.listener.DefaultHttpListenerConfig: Listening for requests on http://localhost:8085/productInfo/proxy
+INFO  2017-06-28 20:26:01,796 [main] org.mule.modules.oauth2.provider.agents.DefaultSplashScreenAgent: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ DevKit Extensions (0) used in this application 
+                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-06-28 20:26:01,799 [main] org.mule.lifecycle.AbstractLifecycleManager: Starting model: _muleSystemModel
+INFO  2017-06-28 20:26:01,800 [main] org.mule.construct.FlowConstructLifecycleManager: Starting flow: PProxyToProductInformationFlow
+INFO  2017-06-28 20:26:01,800 [main] org.mule.processor.SedaStageLifecycleManager: Starting service: PProxyToProductInformationFlow.stage1
+INFO  2017-06-28 20:26:01,829 [main] org.mule.module.management.agent.WrapperManagerAgent: This JVM hasn't been launched by the wrapper, the agent will not run.
+INFO  2017-06-28 20:26:01,845 [main] org.mule.DefaultMuleContext: 
+**********************************************************************
+* Application: pproxytoproductinformation                            *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   DevKit Extension Information                                     *
+*   Wrapper Manager                                                  *
+**********************************************************************
+INFO  2017-06-28 20:26:16,812 [[pproxytoproductinformation].HTTP_Listener_Configuration.worker.01] org.mule.module.http.internal.listener.HttpListenerRegistry: No listener found for request: (GET)/favicon.ico
+INFO  2017-06-28 20:26:16,812 [[pproxytoproductinformation].HTTP_Listener_Configuration.worker.01] org.mule.module.http.internal.listener.HttpListenerRegistry: Available listeners are: [(*)/productInfo/proxy/]

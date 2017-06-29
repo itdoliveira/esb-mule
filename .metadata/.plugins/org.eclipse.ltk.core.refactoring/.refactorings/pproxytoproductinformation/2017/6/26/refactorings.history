@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;wsdl&apos; to &apos;pproxytoproductinformation/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;pproxytoproductinformation&apos;&#x0D;&#x0A;- Destination element: &apos;pproxytoproductinformation/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;pproxytoproductinformation/src/main/resources/wsdl&apos;" description="Copy package" destination="/src\/main\/resources" element1="/src\/main\/resources&lt;wsdl" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1498691707783" version="1.0"/>
+</session>
